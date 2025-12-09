@@ -6,13 +6,13 @@
   <meta name="description" content="SOC Support Analyst portfolio showcasing incident triage, SIEM, EDR, techniques, and projects."/>
   <title>Esihle — SOC Support Analyst</title>
 
-  <!-- Favicon (replace with your own) -->
+  <!-- Favicon -->
   <link rel="icon" href="data:," />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- Open Graph (for social link previews) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Esihle — SOC Support Analyst Portfolio" />
   <meta property="og:description" content="Incident triage, SIEM detections, EDR investigations, playbooks, and automation examples." />
 </head>
@@ -63,7 +63,6 @@
           </dl>
         </div>
         <div class="hero-card" aria-hidden="false">
-          <!-- Replace with your photo -->
           <div class="avatar" role="img" aria-label="Profile Photo">E</div>
           <ul class="contact-links">
             <li><a href="mailto:you@example.com">you@example.com</a></li>
@@ -87,30 +86,12 @@
     <section id="skills" class="section container">
       <h3>Skills</h3>
       <ul class="skill-grid" aria-label="Technical skills">
-        <li>
-          <strong>SIEM</strong>
-          <span>Splunk, Elastic, QRadar, Microsoft Sentinel</span>
-        </li>
-        <li>
-          <strong>Endpoint</strong>
-          <span>CrowdStrike, Carbon Black, Defender for Endpoint</span>
-        </li>
-        <li>
-          <strong>Response</strong>
-          <span>Incident Triage, Playbooks, Escalation, Ticketing (Jira, ServiceNow)</span>
-        </li>
-        <li>
-          <strong>Investigation</strong>
-          <span>Log parsing, Yara, EDR queries, IOC enrichment, MITRE ATT&CK mappings</span>
-        </li>
-        <li>
-          <strong>Scripting</strong>
-          <span>Python, Bash, PowerShell — automation & detection tuning</span>
-        </li>
-        <li>
-          <strong>Networking</strong>
-          <span>TCP/IP, DNS, HTTP, proxy logs, Netflow analysis</span>
-        </li>
+        <li><strong>SIEM</strong><span>Splunk, Elastic, QRadar, Microsoft Sentinel</span></li>
+        <li><strong>Endpoint</strong><span>CrowdStrike, Carbon Black, Defender for Endpoint</span></li>
+        <li><strong>Response</strong><span>Incident Triage, Playbooks, Escalation, Ticketing (Jira, ServiceNow)</span></li>
+        <li><strong>Investigation</strong><span>Log parsing, Yara, EDR queries, IOC enrichment, MITRE ATT&CK mappings</span></li>
+        <li><strong>Scripting</strong><span>Python, Bash, PowerShell — automation & detection tuning</span></li>
+        <li><strong>Networking</strong><span>TCP/IP, DNS, HTTP, proxy logs, Netflow analysis</span></li>
       </ul>
     </section>
 
@@ -143,23 +124,15 @@
       <div class="project-grid">
         <div class="project">
           <h4>Detection Tuning (Splunk)</h4>
-          <p>
-            Example: implemented a throttling and enrichment strategy that lowered alert volume and improved signal-to-noise for phishing
-            and suspicious logins. (Link to repo or screenshots)
-          </p>
+          <p>Implemented throttling and enrichment strategy that lowered alert volume and improved signal-to-noise.</p>
         </div>
-
         <div class="project">
           <h4>Playbook Library</h4>
-          <p>
-            A set of standardized playbooks for Tier 1 triage covering phishing, brute-force, and suspicious USB usage.
-            Includes checklists, escalation steps, and recommended IOC collection.
-          </p>
+          <p>Standardized playbooks for Tier 1 triage covering phishing, brute-force, and suspicious USB usage.</p>
         </div>
-
         <div class="project">
           <h4>EDR Investigation Scripts</h4>
-          <p>PowerShell and Python helpers to collect process trees, targeted file hashes, and automate artifact collection.</p>
+          <p>PowerShell and Python helpers to collect process trees, file hashes, and automate artifact collection.</p>
         </div>
       </div>
     </section>
@@ -168,8 +141,6 @@
     <section id="contact" class="section container">
       <h3>Contact</h3>
       <p>If you'd like to work together or request my resume, get in touch using the form below or email me.</p>
-
-      <!-- Simple contact form: customize action to Formspree, FormSubmit, or your backend -->
       <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/your-email@example.com" novalidate>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required />
@@ -178,12 +149,9 @@
         <input id="email" name="email" type="email" required />
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required placeholder="Brief summary: e.g., opportunity, collaboration, or question"></textarea>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
-        <!-- Honeypot to reduce spam -->
         <input type="text" name="_honey" style="display:none" />
-
-        <!-- Redirect on success - change to your thanks page -->
         <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html" />
 
         <button type="submit" class="btn primary">Send message</button>
