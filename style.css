@@ -1,0 +1,197 @@
+:root{
+  --bg:#0f1724;
+  --card:#111827;
+  --muted:#9ca3af;
+  --accent:#06b6d4;
+  --text:#e6eef6;
+  --radius:12px;
+  --container-width:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg, var(--bg), #071123 120%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+/* Layout */
+.container{
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:1.5rem;
+}
+
+/* Header */
+.site-header{
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand h1{
+  margin:0;
+  font-size:1.25rem;
+}
+.brand .role{
+  margin:0;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* Nav */
+.site-nav ul{
+  list-style:none;
+  display:flex;
+  gap:1rem;
+  margin:0;
+  padding:0;
+}
+.site-nav a{
+  color:var(--muted);
+  text-decoration:none;
+}
+.site-nav a:hover{color:var(--text)}
+
+/* Hero */
+.hero{
+  padding:2.25rem 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:1.25rem;
+  align-items:start;
+}
+.hero-text h2{
+  margin:0 0 0.5rem 0;
+  font-size:1.5rem;
+  line-height:1.2;
+}
+.hero-text p{color:var(--muted); margin:0 0 1rem 0}
+
+.cta-row{display:flex; gap:0.75rem; margin-top:1rem}
+.btn{
+  display:inline-block;
+  padding:0.6rem 1rem;
+  border-radius:8px;
+  text-decoration:none;
+  text-align:center;
+  cursor:pointer;
+  border:1px solid transparent;
+  font-weight:600;
+}
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent),#7dd3fc);
+  color:#042027;
+}
+.btn.outline{
+  background:transparent;
+  color:var(--text);
+  border-color:rgba(255,255,255,0.06);
+}
+
+/* Hero card */
+.hero-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:1rem;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.avatar{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#60a5fa);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:2.25rem;
+  color:#002022;
+  margin-bottom:0.75rem;
+}
+.contact-links{list-style:none;padding:0;margin:0}
+.contact-links li{margin:0.4rem 0}
+.contact-links a{color:var(--muted); text-decoration:none}
+
+/* About/Sections */
+.section{padding:1.5rem 0}
+h3{margin:0 0 0.75rem 0}
+.muted{color:var(--muted); font-size:0.95rem}
+
+/* Skill grid */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:1rem;
+  list-style:none;
+  padding:0;
+}
+.skill-grid li{
+  background:rgba(255,255,255,0.02);
+  padding:0.75rem;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+/* Cards */
+.card{background:rgba(255,255,255,0.02); padding:1rem; border-radius:10px; margin-bottom:0.75rem}
+
+/* Projects */
+.project-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem}
+.project{background:rgba(255,255,255,0.01); padding:0.85rem; border-radius:8px}
+
+/* Contact form */
+.contact-form{display:grid; gap:0.6rem; max-width:640px}
+.contact-form label{font-size:0.9rem}
+.contact-form input, .contact-form textarea{
+  padding:0.6rem;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);
+  color:var(--text);
+  outline:none;
+}
+.contact-form input:focus, .contact-form textarea:focus{box-shadow:0 0 0 3px rgba(6,182,212,0.12); border-color:var(--accent)}
+
+/* Footer */
+.site-footer{padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.02); color:var(--muted)}
+
+/* Utility */
+.quick-stats{display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap}
+.quick-stats dt{font-weight:700}
+.quick-stats dd{margin:0 0 0.5rem 0; color:var(--muted)}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  position:static;
+  left:auto;
+  width:auto;
+  height:auto;
+  padding:0.5rem;
+  background:#fff;
+  color:#000;
+}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero-grid{grid-template-columns:1fr}
+  .site-nav ul{display:none}
+  .brand{display:flex; gap:1rem; align-items:center}
+}
