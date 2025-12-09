@@ -9,17 +9,17 @@
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  /* blue gradient background */
-  background:linear-gradient(180deg, var(--bg) 0%, #063775 60%, #021428 140%);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
-  font-size:16px;
+/* Force the background on the root and body to ensure it takes effect */
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg) 0%, #063775 60%, #021428 140%) !important;
+  background-attachment: fixed !important;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 /* Layout */
@@ -33,6 +33,7 @@ body{
 .site-header{
   border-bottom:1px solid rgba(255,255,255,0.04);
   backdrop-filter: blur(6px);
+  background: transparent; /* ensure header doesn't override page background */
 }
 .header-inner{
   display:flex;
@@ -66,6 +67,7 @@ body{
 /* Hero */
 .hero{
   padding:2.25rem 0;
+  background: transparent;
 }
 .hero-grid{
   display:grid;
@@ -165,7 +167,7 @@ h3{margin:0 0 0.75rem 0}
 .contact-form input:focus, .contact-form textarea:focus{box-shadow:0 0 0 3px rgba(6,182,212,0.12); border-color:var(--accent)}
 
 /* Footer */
-.site-footer{padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.02); color:var(--muted)}
+.site-footer{padding:1.5rem 0; border-top:1px solid rgba(255,255,255,0.02); color:var(--muted); background: transparent}
 
 /* Utility */
 .quick-stats{display:flex; gap:1rem; margin-top:1rem; flex-wrap:wrap}
