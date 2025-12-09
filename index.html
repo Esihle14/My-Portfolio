@@ -149,7 +149,7 @@
     <section id="contact" class="section container">
       <h3>Contact</h3>
       <p>If you'd like to work together or request my resume, get in touch using the form below or email me.</p>
-      <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/your-email@example.com" novalidate>
+      <form id="contact-form" class="contact-form" method="POST" action="https://formsubmit.co/esihlenqwiliso189@gmail.com" novalidate>
         <label for="name">Name</label>
         <input id="name" name="name" type="text" required />
 
@@ -159,8 +159,14 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" required></textarea>
 
+        <!-- Honeypot (spam protection) -->
         <input type="text" name="_honey" style="display:none" />
-        <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html" />
+
+        <!-- Success redirect -->
+        <input type="hidden" name="_next" value="https://Esihle14.github.io/contact-form-website/thanks.html" />
+
+        <!-- Disable Captcha (optional) -->
+        <input type="hidden" name="_captcha" value="false" />
 
         <button type="submit" class="btn primary">Send message</button>
       </form>
@@ -169,10 +175,4 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Esihle — SOC Support Analyst · Tech Support · Service Desk Agent · <a href="#contact">Contact</a></p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <p>© <span id="year"></span> Esihle
